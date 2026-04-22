@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Escuela Filial Tulancingo Tuzos</title>
+<title>Filial Tulancingo Tuzos</title>
 
 <style>
 body {
@@ -13,10 +13,11 @@ body {
     color: white;
 }
 
+/* HEADER */
 header {
-    background: #0b1d3a;
+    background: linear-gradient(90deg, #0b1d3a, #123a7a);
     text-align: center;
-    padding: 30px;
+    padding: 40px 20px;
 }
 
 header h1 {
@@ -24,38 +25,76 @@ header h1 {
     font-size: 2.5em;
 }
 
-.banner {
-    background: url('https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a') center/cover;
-    padding: 100px 20px;
-    text-align: center;
+header p {
+    margin-top: 10px;
+    font-size: 1.2em;
 }
 
-.banner h2 {
-    font-size: 2.5em;
-    background: rgba(0,0,0,0.6);
-    display: inline-block;
-    padding: 15px;
+/* HERO */
+.hero {
+    background: url('https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a') center/cover;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h2 {
+    background: rgba(0,0,0,0.7);
+    padding: 20px;
     border-radius: 10px;
 }
 
+/* SECCIONES */
 .section {
     padding: 40px 20px;
     text-align: center;
 }
 
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .card {
     background: white;
     color: black;
-    margin: 15px auto;
+    margin: 10px;
     padding: 20px;
-    border-radius: 10px;
-    max-width: 500px;
+    border-radius: 12px;
+    width: 280px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-.footer {
+/* TITULOS */
+h2 {
+    margin-bottom: 20px;
+}
+
+/* MAPA */
+iframe {
+    border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
     background: black;
     text-align: center;
     padding: 20px;
+}
+
+/* BOTÓN WHATSAPP */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
 }
 </style>
 
@@ -64,65 +103,88 @@ header h1 {
 <body>
 
 <header>
-    <h1>⚽ Escuela Filial Tulancingo Tuzos</h1>
-    <p>Del Club Pachuca</p>
+    <h1>⚽ Filial Tulancingo Tuzos</h1>
+    <p>Formación profesional - Club Pachuca</p>
 </header>
 
-<div class="banner">
+<div class="hero">
     <h2>¡Inscripciones Abiertas!</h2>
 </div>
 
 <div class="section">
     <h2>📍 Ubicación</h2>
-    <div class="card">
-        Cancha #2<br>
-        Unidad Deportiva Tulancingo
+    <div class="cards">
+        <div class="card">
+            Cancha #2<br>
+            Unidad Deportiva Tulancingo
+        </div>
     </div>
 </div>
 
 <div class="section">
     <h2>⏰ Entrenamientos</h2>
-    <div class="card">
-        Lunes a Jueves<br>
-        4:00 PM a 6:00 PM
+    <div class="cards">
+        <div class="card">
+            Lunes a Jueves<br>
+            4:00 PM - 6:00 PM
+        </div>
     </div>
 </div>
 
 <div class="section">
-    <h2>👥 ¿Quiénes pueden participar?</h2>
-    <div class="card">
-        Niños y jóvenes de 5 a 25 años<br>
-        Formación con metodología profesional
+    <h2>👥 Participantes</h2>
+    <div class="cards">
+        <div class="card">
+            Niños y jóvenes<br>
+            de 5 a 25 años
+        </div>
+        <div class="card">
+            Metodología profesional<br>
+            formación integral
+        </div>
     </div>
 </div>
 
 <div class="section">
     <h2>📋 Requisitos</h2>
-    <div class="card">
-        • Copia de CURP<br>
-        • 4 fotografías tamaño infantil
+    <div class="cards">
+        <div class="card">Copia de CURP</div>
+        <div class="card">4 fotos tamaño infantil</div>
     </div>
 </div>
 
 <div class="section">
     <h2>⚽ Entrenamiento Femenil</h2>
-    <div class="card">
-        Lunes a Jueves<br>
-        4:00 PM a 6:00 PM
+    <div class="cards">
+        <div class="card">
+            Lunes a Jueves<br>
+            4:00 PM - 6:00 PM
+        </div>
     </div>
 </div>
 
 <div class="section">
+    <h2>📍 Ubicación en mapa</h2>
+    <iframe 
+    src="https://www.google.com/maps?q=Unidad+Deportiva+Tulancingo&output=embed" 
+    width="90%" height="300"></iframe>
+</div>
+
+<div class="section">
     <h2>📞 Informes</h2>
-    <div class="card">
-        Refugio (Cuco) Alvarado Lozano<br><br>
-        📱 775 120 1695
+    <div class="cards">
+        <div class="card">
+            Refugio (Cuco) Alvarado Lozano<br><br>
+            📱 775 120 1695
+        </div>
     </div>
 </div>
 
-<div class="footer">
+<footer>
     <p>Formamos jugadores, formamos personas ⚽</p>
-</div>
+</footer>
+
+<a href="https://wa.me/527751201695" class="whatsapp">📲 WhatsApp</a>
 
 </body>
 </html>
