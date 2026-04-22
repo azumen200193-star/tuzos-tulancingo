@@ -8,39 +8,76 @@
 <style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     background: #0b1d3a;
     color: white;
 }
 
 /* HEADER */
 header {
-    background: linear-gradient(90deg, #0b1d3a, #123a7a);
-    text-align: center;
-    padding: 40px 20px;
+    background: #0b1d3a;
+    border-bottom: 3px solid #ffd700;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 60px;
+    background: white;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.logo h1 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.menu a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.menu a:hover {
+    color: #ffd700;
 }
 
 /* HERO */
 .hero {
-    background: url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2') center/cover;
-    height: 350px;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2') center/cover;
+    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;  
 }
 
 .hero h2 {
-    background: rgba(0,0,0,0.7);
-    padding: 15px;
-    border-radius: 10px;
+    font-size: 32px;
 }
 
 .btn {
     margin-top: 15px;
     background: #ffd700;
     color: black;
-    padding: 12px 20px;
+    padding: 12px 25px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
@@ -65,18 +102,20 @@ header {
     padding: 20px;
     border-radius: 12px;
     width: 260px;
-    transition: transform 0.3s;
 }
 
-.card:hover {
-    transform: scale(1.05);
-}
-
-/* GALERÍA */
-.gallery img {
-    width: 250px;
-    margin: 10px;
+/* MAPA */
+iframe {
+    width: 90%;
+    height: 300px;
     border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+    background: black;
+    padding: 20px;
+    text-align: center;
 }
 
 /* WHATSAPP */
@@ -91,71 +130,67 @@ header {
     color: white;
     font-size: 20px;
 }
-
-/* FOOTER */
-footer {
-    background: black;
-    padding: 20px;
-    text-align: center;
-}
 </style>
 
 </head>
 
 <body>
 
-<header style="display:flex; align-items:center; justify-content:center; gap:15px; padding:20px;">
-    <img src="logo.png" style="width:80px;">
-    <div>
-        <h1 style="margin:0;">Filial Tulancingo Tuzos</h1>
-        <p style="margin:0;">Club Pachuca</p>
+<header>
+    <div class="nav">
+        <div class="logo">
+            <img src="logo.png">
+            <h1>Filial Tulancingo Tuzos</h1>
+        </div>
+
+        <div class="menu">
+            <a href="#inicio">Inicio</a>
+            <a href="#entrenamientos">Entrenamientos</a>
+            <a href="#ubicacion">Ubicación</a>
+            <a href="#contacto">Contacto</a>
+        </div>
     </div>
 </header>
-    <p>Formación profesional - Club Pachuca</p>
-</header>
 
-<div class="hero">
-    <h2>¡INSCRIPCIONES ABIERTAS!</h2>
-    <a href="https://wa.me/527751201695" class="btn">Inscribirme ahora</a>
+<div class="hero" id="inicio">
+    <h2>INSCRIPCIONES ABIERTAS</h2>
+    <p>Forma parte de la formación profesional</p>
+    <a href="https://wa.me/527751201695" class="btn">Inscribirme</a>
 </div>
 
-<div class="section">
-    <h2>🎯 ¿Por qué elegirnos?</h2>
+<div class="section" id="entrenamientos">
+    <h2>⏰ Entrenamientos</h2>
     <div class="cards">
-        <div class="card">Entrenadores profesionales</div>
-        <div class="card">Metodología tipo Pachuca</div>
-        <div class="card">Desarrollo integral</div>
-        <div class="card">Oportunidades de visorias</div>
+        <div class="card">Lunes a Jueves<br>4:00 PM - 6:00 PM</div>
+        <div class="card">Categorías: 5 a 25 años</div>
+        <div class="card">Entrenamiento Femenil disponible</div>
     </div>
 </div>
 
 <div class="section">
+    <h2>🎯 Beneficios</h2>
+    <div class="cards">
+        <div class="card">Entrenadores certificados</div>
+        <div class="card">Metodología profesional</div>
+        <div class="card">Desarrollo integral</div>
+    </div>
+</div>
+
+<div class="section" id="ubicacion">
     <h2>📍 Ubicación</h2>
     <p>Cancha #2, Unidad Deportiva Tulancingo</p>
+
+    <iframe src="https://www.google.com/maps?q=Unidad+Deportiva+Tulancingo&output=embed"></iframe>
 </div>
 
-<div class="section">
-    <h2>⏰ Entrenamientos</h2>
-    <p>Lunes a Jueves - 4:00 PM a 6:00 PM</p>
-</div>
-
-<div class="section">
-    <h2>📸 Galería</h2>
-    <div class="gallery">
-        <img src="https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a">
-        <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2">
-        <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20">
-    </div>
-</div>
-
-<div class="section">
+<div class="section" id="contacto">
     <h2>📞 Contacto</h2>
     <p>Refugio (Cuco) Alvarado Lozano</p>
     <p>📱 775 120 1695</p>
 </div>
 
 <footer>
-    <p>Formamos jugadores, formamos personas ⚽</p>
+    <p>© Filial Tulancingo Tuzos - Formación profesional ⚽</p>
 </footer>
 
 <a href="https://wa.me/527751201695" class="whatsapp">📲</a>
