@@ -6,132 +6,193 @@
 <title>Filial Tulancingo Tuzos</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #0b1d3a;
-    color: white;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI', sans-serif;
+    background:#071a35;
+    color:white;
 }
 
 /* HEADER */
-header {
-    background: #0b1d3a;
-    border-bottom: 3px solid #ffd700;
+header{
+    background:#081a33;
+    border-bottom:2px solid #d4a017;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-.nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 20px;
-    max-width: 1100px;
-    margin: auto;
+.nav{
+    max-width:1200px;
+    margin:auto;
+    padding:15px 25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
 }
 
-.logo img {
-    width: 60px;
-    background: white;
-    border-radius: 8px;
-    padding: 5px;
+.logo img{
+    width:60px;
+    background:white;
+    border-radius:8px;
+    padding:4px;
 }
 
-.logo h1 {
-    font-size: 18px;
-    margin: 0;
-}
-
-.menu a {
-    color: white;
-    margin-left: 15px;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.menu a:hover {
-    color: #ffd700;
+.menu a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:bold;
 }
 
 /* HERO */
-.hero {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-    url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2') center/cover;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;  
+.hero{
+    min-height:650px;
+    background:
+    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    url('https://images.unsplash.com/photo-1547347298-4074fc3086f0?q=80&w=1400') center/cover;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:20px;
 }
 
-.hero h2 {
-    font-size: 32px;
+.hero-content h2{
+    font-size:60px;
+    font-weight:900;
 }
 
-.btn {
-    margin-top: 15px;
-    background: #ffd700;
-    color: black;
-    padding: 12px 25px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
+.hero-content p{
+    font-size:24px;
+    margin-top:15px;
 }
 
-/* SECCIONES */
-.section {
-    padding: 50px 20px;
-    text-align: center;
+.hero-content span{
+    color:#d4a017;
 }
 
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    background:#d4a017;
+    color:white;
+    padding:15px 35px;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:bold;
 }
 
-.card {
-    background: white;
-    color: black;
-    margin: 10px;
-    padding: 20px;
-    border-radius: 12px;
-    width: 260px;
+/* BENEFICIOS */
+.features{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    max-width:1200px;
+    margin:-60px auto 50px;
+    padding:0 20px;
+}
+
+.feature-box{
+    background:#0b2346;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+}
+
+/* TARJETAS */
+.section{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    max-width:1100px;
+    margin:auto;
+}
+
+.card{
+    background:white;
+    color:#071a35;
+    padding:25px;
+    border-radius:15px;
+    font-weight:600;
+}
+
+/* GALERÍA */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    max-width:1100px;
+    margin:auto;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:12px;
+    height:220px;
+    object-fit:cover;
 }
 
 /* MAPA */
-iframe {
-    width: 90%;
-    height: 300px;
-    border-radius: 10px;
+iframe{
+    width:100%;
+    max-width:1000px;
+    height:350px;
+    border-radius:15px;
+    margin-top:20px;
+}
+
+/* CONTACTO */
+.contact-box{
+    max-width:800px;
+    margin:auto;
+    background:white;
+    color:#071a35;
+    padding:30px;
+    border-radius:15px;
 }
 
 /* FOOTER */
-footer {
-    background: black;
-    padding: 20px;
-    text-align: center;
+footer{
+    background:#04101f;
+    padding:30px;
+    text-align:center;
+    margin-top:50px;
 }
 
 /* WHATSAPP */
-.whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
-    padding: 15px;
-    border-radius: 50%;
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    text-decoration:none;
+    color:white;
 }
 </style>
-
 </head>
 
 <body>
@@ -140,12 +201,12 @@ footer {
     <div class="nav">
         <div class="logo">
             <img src="logo.png">
-            <h1>Filial Tulancingo Tuzos</h1>
+            <h2>TUZOS TULANCINGO</h2>
         </div>
 
         <div class="menu">
             <a href="#inicio">Inicio</a>
-            <a href="#entrenamientos">Entrenamientos</a>
+            <a href="#galeria">Galería</a>
             <a href="#ubicacion">Ubicación</a>
             <a href="#contacto">Contacto</a>
         </div>
@@ -153,44 +214,63 @@ footer {
 </header>
 
 <div class="hero" id="inicio">
-    <h2>INSCRIPCIONES ABIERTAS</h2>
-    <p>Forma parte de la formación profesional</p>
-    <a href="https://wa.me/527751201695" class="btn">Inscribirme</a>
-</div>
-
-<div class="section" id="entrenamientos">
-    <h2>⏰ Entrenamientos</h2>
-    <div class="cards">
-        <div class="card">Lunes a Jueves<br>4:00 PM - 6:00 PM</div>
-        <div class="card">Categorías: 5 a 25 años</div>
-        <div class="card">Entrenamiento Femenil disponible</div>
+    <div class="hero-content">
+        <h2>FILIAL TULANCINGO <span>TUZOS</span></h2>
+        <p>Formamos jugadores, formamos personas</p>
+        <a href="https://wa.me/527751201695" class="btn">
+            INSCRÍBETE AHORA
+        </a>
     </div>
 </div>
 
+<div class="features">
+    <div class="feature-box">Entrenadores profesionales</div>
+    <div class="feature-box">Metodología Club Pachuca</div>
+    <div class="feature-box">Visorías y torneos</div>
+    <div class="feature-box">Valores y disciplina</div>
+</div>
+
 <div class="section">
-    <h2>🎯 Beneficios</h2>
+    <h2>Entrenamientos</h2>
     <div class="cards">
-        <div class="card">Entrenadores certificados</div>
-        <div class="card">Metodología profesional</div>
-        <div class="card">Desarrollo integral</div>
+        <div class="card">Lunes a Jueves<br>4:00 PM - 6:00 PM</div>
+        <div class="card">5 a 25 años</div>
+        <div class="card">Cancha #2 Unidad Deportiva</div>
+        <div class="card">Copia CURP + 4 fotos</div>
+    </div>
+</div>
+
+<div class="section" id="galeria">
+    <h2>Galería</h2>
+    <br>
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018">
+        <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974">
+        <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2">
+        <img src="https://images.unsplash.com/photo-1543357480-c60d400e2ef9">
     </div>
 </div>
 
 <div class="section" id="ubicacion">
-    <h2>📍 Ubicación</h2>
-    <p>Cancha #2, Unidad Deportiva Tulancingo</p>
-
+    <h2>¿Dónde estamos?</h2>
     <iframe src="https://www.google.com/maps?q=Unidad+Deportiva+Tulancingo&output=embed"></iframe>
 </div>
 
 <div class="section" id="contacto">
-    <h2>📞 Contacto</h2>
-    <p>Refugio (Cuco) Alvarado Lozano</p>
-    <p>📱 775 120 1695</p>
+    <h2>Contacto / Informes</h2>
+    <br>
+    <div class="contact-box">
+        <h3>Refugio (Cuco) Alvarado Lozano</h3>
+        <h1>775 120 1695</h1>
+        <br>
+        <a href="https://wa.me/527751201695" class="btn">
+            Escríbenos por WhatsApp
+        </a>
+    </div>
 </div>
 
 <footer>
-    <p>© Filial Tulancingo Tuzos - Formación profesional ⚽</p>
+    Somos Tuzos, somos familia ⚽
 </footer>
 
 <a href="https://wa.me/527751201695" class="whatsapp">📲</a>
